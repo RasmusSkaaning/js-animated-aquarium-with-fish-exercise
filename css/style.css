@@ -41,6 +41,29 @@
   position: relative;
   z-index: 1;
 }
+#codfish2 {
+  bottom: 63px;
+  right: -170px;
+  animation: arcLeftMotion 18s linear infinite;
+}
+
+#codfish3 {
+  bottom: 13px;
+  right: -160px;
+  animation: arcLeftMotion 19s linear infinite;
+}
+
+#codfish4 {
+  bottom: 13px;
+  right: -48px;
+  animation: arcLeftMotion 22s linear infinite;
+}
+
+#codfish5 {
+  bottom: 43px;
+  right: -38px;
+  animation: arcLeftMotion 23s linear infinite;
+}
 .orangefish {
   z-index: auto;
   bottom: 70px;
