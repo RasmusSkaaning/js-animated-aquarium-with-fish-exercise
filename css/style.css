@@ -76,6 +76,35 @@
   animation: arcLeftMotion 23s linear infinite;
 }
 
+/* Yellow-Blue Fish */
+#codfish5.yellow-blue-fish {
+  position: absolute;
+  width: 120px; /* Juster størrelsen */
+  height: auto; /* Bevar proportionerne */
+  bottom: 100px; /* Juster positionen */
+  left: 200px; /* Juster positionen */
+  animation: circularMotion 10s linear infinite; /* Anvend cirkulær animation */
+}
+
+/* Pirate Fish */
+#codfish5.pirate-fish {
+  position: absolute;
+  width: 100px; /* Juster størrelsen */
+  height: auto; /* Bevar proportionerne */
+  bottom: 150px; /* Juster positionen */
+  left: 400px; /* Juster positionen */
+  animation: bouncingMotion 8s ease-in-out infinite; /* Anvend hoppende animation */
+}
+
+/* Colorful Fish */
+#codfish5.colorful-fish {
+  position: absolute;
+  width: 110px; /* Juster størrelsen */
+  height: auto; /* Bevar proportionerne */
+  bottom: 50px; /* Juster positionen */
+  left: 600px; /* Juster positionen */
+  animation: driftingMotion 12s linear infinite; /* Anvend langsom drift animation */
+}
 #tropicalfish1 {
   bottom: 230px;
   right: -200px;
@@ -257,5 +286,53 @@
   }
   100% {
     transform: translate(2560px, -120px);
+  }
+}
+
+/* Ny animation: cirkulær bevægelse */
+@keyframes circularMotion {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, -50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, -100px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50px, -50px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+/* Ny animation: hoppende bevægelse */
+@keyframes bouncingMotion {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  75% {
+    transform: translateY(-30px);
+  }
+}
+
+/* Ny animation: langsom drift */
+@keyframes driftingMotion {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100px, 20px);
+  }
+  100% {
+    transform: translate(200px, -10px);
   }
 }
