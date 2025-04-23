@@ -167,6 +167,43 @@
 
 #tooltip {
   position: absolute;
+  background: url('../img/bubble-bg.png') no-repeat center center, rgba(255, 255, 255, 0.8); /* Semi-transparent baggrund med bobletema */
+  background-size: cover;
+  color: #003366; /* Mørkeblå farve for at matche havtemaet */
+  padding: 10px 15px;
+  border-radius: 12px; /* Runde hjørner */
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Blød skygge for at få tooltippen til at poppe */
+  transform: scale(0.9); /* Start med en mindre størrelse for en pop-effekt */
+}
+
+#tooltip.show {
+  opacity: 1;
+  transform: scale(1); /* Pop-effekt */
+}
+
+#tooltip strong {
+  font-size: 16px;
+  color: #002244; /* Mørkere blå til overskrifter */
+}
+
+#tooltip .icon {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #0066cc; /* Lysere blå til ikoner */
+}
+
+#tooltip .info-line {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}tip {
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 6px 10px;
