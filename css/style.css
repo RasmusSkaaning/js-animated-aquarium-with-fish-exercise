@@ -64,6 +64,29 @@
   right: -38px;
   animation: arcLeftMotion 23s linear infinite;
 }
+#tropicalfish1 {
+  bottom: 230px;
+  right: -200px;
+  width: 100px;
+  height: 94px;
+  animation: arcLeftMotion 17s linear infinite;
+}
+
+#tropicalfish2 {
+  bottom: 245px;
+  right: -200px;
+  width: 100px;
+  height: 94px;
+  animation: arcLeftMotion 14s linear infinite;
+}
+
+#tropicalfish3 {
+  bottom: 260px;
+  right: -200px;
+  width: 100px;
+  height: 94px;
+  animation: arcLeftMotion 20s linear infinite;
+}
 .orangefish {
   z-index: auto;
   bottom: 70px;
@@ -87,6 +110,33 @@
   animation: arcLeftMotion 16s linear infinite;
 }
 
+.small-clam {
+  z-index: auto;
+  bottom: 20px;
+  right: 320px;
+}
+
+.big-clam {
+  z-index: auto;
+  bottom: -7px;
+  left: 746px;
+}
+
+.seaweed {
+  z-index: auto;
+  bottom: -10px;
+  right: 880px;
+  width: 215px;
+  height: 180px;
+}
+
+.algae {
+  z-index: auto;
+  bottom: -10px;
+  right: 580px;
+  width: 140px;
+  height: 300px;
+}
 /* ANIMATIONER */
 
 @keyframes zigzag {
