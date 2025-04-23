@@ -13,35 +13,45 @@
   height: 100%;
   background: url(../img/aquarium-bg.png) no-repeat center center;
   background-size: cover;
+  overflow: visible; /* Sørg for, at fiskene ikke bliver klippet */
 }
 
 /* Fælles styling for fisk */
 .bg img {
   position: absolute;
   max-width: 200px;
-  z-index: 1;
+}
+
+.redfish,
+.orangefish,
+.flatbluefish,
+.bluefish,
+.codfish,
+.tropicalfish {
+  pointer-events: auto; /* Sørg for, at fiskene kan klikkes */
+  z-index: 2; /* Sørg for, at fiskene ikke bliver dækket af andre elementer */
 }
 
 .redfish {
-  z-index: auto;
   bottom: 70px;
   left: -200px;
   max-width: 300px;
   animation: zigzag 17s linear infinite;
 }
+
 #redfish2 {
-  z-index: auto;
   bottom: 140px;
   left: -200px;
   max-width: 320px;
   animation: swim 11s linear infinite;
 }
+
 .bluefish {
   max-width: 200px;
   position: relative;
-  z-index: 1;
   animation: swim 11s linear infinite;
 }
+
 #codfish2 {
   bottom: 63px;
   right: -170px;
@@ -65,6 +75,7 @@
   right: -38px;
   animation: arcLeftMotion 23s linear infinite;
 }
+
 #tropicalfish1 {
   bottom: 230px;
   right: -200px;
@@ -88,8 +99,8 @@
   height: 94px;
   animation: arcLeftMotion 20s linear infinite;
 }
+
 .orangefish {
-  z-index: auto;
   bottom: 70px;
   left: -200px;
   width: 94px;
@@ -98,33 +109,28 @@
 }
 
 .flatbluefish {
-  z-index: auto;
   bottom: 180px;
   right: -200px;
   animation: arcLeftMotion 21s linear infinite;
 }
 
 .codfish {
-  z-index: auto;
   bottom: 23px;
   right: -200px;
   animation: arcLeftMotion 16s linear infinite;
 }
 
 .small-clam {
-  z-index: auto;
   bottom: 20px;
   right: 320px;
 }
 
 .big-clam {
-  z-index: auto;
   bottom: -7px;
   left: 746px;
 }
 
 .seaweed {
-  z-index: auto;
   bottom: -10px;
   right: 880px;
   width: 215px;
@@ -132,19 +138,20 @@
 }
 
 .algae {
-  z-index: auto;
   bottom: -10px;
   right: 580px;
   width: 140px;
   height: 300px;
 }
+
 .anchor {
-  z-index: auto;
+  z-index: 3;
   bottom: 1px;
   left: 445px;
   width: 120px;
   height: 165px;
 }
+
 #anchor-tooltip {
   position: absolute;
   background-color: #222;
@@ -154,7 +161,7 @@
   font-size: 0.9rem;
   opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none;
+  pointer-events: auto;
   z-index: 100;
 }
 
@@ -170,8 +177,8 @@
   transition: opacity 0.3s ease;
   z-index: 10;
 }
-/* ANIMATIONER */
 
+/* ANIMATIONER */
 @keyframes zigzag {
   0%   { transform: translate(0, 0) scaleX(1); }
   25%  { transform: translate(600px, -50px) scaleX(1); }
@@ -215,10 +222,3 @@
     transform: translate(2560px, -120px);
   }
 }
-.spin-grow {
-  animation: spinGrow 1s ease;
-}
-
-
-
-
