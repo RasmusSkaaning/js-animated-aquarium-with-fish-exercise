@@ -42,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
       el.addEventListener("click", (e) => {
         // Dynamisk tooltip-indhold
         tooltip.innerHTML = `
-          <strong>${fish.className}</strong><br>
-          Art: ${fish.art}<br>
-          Alder: ${fish.alder}<br>
+          <strong>${fish.art}</strong><br>
           Latinsk navn: ${fish.latinsknavn || "Ikke tilgængelig"}<br>
+          Alder: ${fish.alder || "Ikke tilgængelig"}<br>
           Længde: ${fish.længde || "Ikke tilgængelig"}<br>
           Vægt: ${fish.vægt || "Ikke tilgængelig"}<br>
           Levested: ${fish.levested || "Ikke tilgængelig"}
