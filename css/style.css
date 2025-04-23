@@ -144,6 +144,18 @@
   width: 120px;
   height: 165px;
 }
+#anchor-tooltip {
+  position: absolute;
+  background-color: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 100;
+}
 /* ANIMATIONER */
 
 @keyframes zigzag {
