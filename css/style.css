@@ -157,6 +157,19 @@
   pointer-events: none;
   z-index: 100;
 }
+
+#tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
 /* ANIMATIONER */
 
 @keyframes zigzag {
