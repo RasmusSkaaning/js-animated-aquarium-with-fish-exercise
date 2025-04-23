@@ -137,6 +137,13 @@
   width: 140px;
   height: 300px;
 }
+.anchor {
+  z-index: auto;
+  bottom: 1px;
+  left: 445px;
+  width: 120px;
+  height: 165px;
+}
 /* ANIMATIONER */
 
 @keyframes zigzag {
