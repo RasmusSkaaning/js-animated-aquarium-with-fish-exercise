@@ -16,4 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
           anchorTooltip.innerText = "Klik for at stoppe musikken";
         }
       });
+      anchor.addEventListener("mouseleave", () => {
+        anchorTooltip.style.opacity = "0";
+      });
   });
