@@ -29,7 +29,18 @@
   max-width: 300px;
   animation: zigzag 17s linear infinite;
 }
-
+#redfish2 {
+  z-index: auto;
+  bottom: 140px;
+  left: -200px;
+  max-width: 320px;
+  animation: swim 11s linear infinite;
+}
+.bluefish {
+  max-width: 200px;
+  position: relative;
+  z-index: 1;
+}
 .orangefish {
   z-index: auto;
   bottom: 70px;
