@@ -13,7 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fish info array
   const fishInfo = [
-    { className: "redfish", art: "Rød Fisk", alder: "2 år" },
+    {
+      className: "redfish",
+      art: "Rød Snapper",
+      alder: "2 år",
+      latinsknavn: "Lutjanus campechanus",
+      længde: "Op til 100 cm",
+      vægt: "Typisk 2–4 kg",
+      levested: "Mexicanske Golf og det sydøstlige USA",
+    },
     { className: "orangefish", art: "Orange Fisk", alder: "3 år" },
     { className: "flatbluefish", art: "Flad Blå Fisk", alder: "1 år" },
     { className: "bluefish", art: "Blå Fisk", alder: "4 år" },
@@ -32,7 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fishElem.forEach((el) => {
       el.addEventListener("click", (e) => {
-        tooltip.innerText = `${fish.art} — Alder: ${fish.alder}`;
+        // Dynamisk tooltip-indhold
+        tooltip.innerHTML = `
+          <strong>${fish.className}</strong><br>
+          Art: ${fish.art}<br>
+          Alder: ${fish.alder}<br>
+          Latinsk navn: ${fish.latinsknavn || "Ikke tilgængelig"}<br>
+          Længde: ${fish.længde || "Ikke tilgængelig"}<br>
+          Vægt: ${fish.vægt || "Ikke tilgængelig"}<br>
+          Levested: ${fish.levested || "Ikke tilgængelig"}
+        `;
         tooltip.style.top = `${e.pageY - 40}px`;
         tooltip.style.left = `${e.pageX + 20}px`;
         tooltip.style.display = "block";
